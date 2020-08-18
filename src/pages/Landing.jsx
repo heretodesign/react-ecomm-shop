@@ -1,17 +1,52 @@
 import React from 'react';
 import 'react-bulma-components/dist/react-bulma-components.min.css'
+import styled from 'styled-components'
 import { Link } from "react-router-dom"
+import img from '../assets/maksim-larin-LtB12xWnkpw-unsplash.jpg'
+
+const Section = styled.section`
+	background-image: url(${img});
+	background-position: center center;
+	background-repeat:  no-repeat;
+	background-size:  cover;
+	position: relative;
+	// height: 100vh;
+`
+const TopDiv = styled.p`
+	font-size: 13px;
+  padding: 10px;
+  text-align: center;
+  line-height: 16px;
+  background: #FFF3;
+  color: #fff;
+  width: 100%;
+`
+const Div = styled.div`
+  /* ... */
+`
+const bkStyle = {
+  background: 'transparent',
+  color: 'white'
+}
+
+const Paragraph = styled.p`
+  /* ... */
+`
+const LinkButton = styled.button`
+	background: #fba502;
+  color: white;
+`
 
 const Landing = () => {
 	return (
 		<>
-			<section className="hero is-primary is-medium imgLanding">
+			<Section className="hero is-primary is-medium">
         <div className="is-paddingless-horizontal topNav">
 					<div className="container-fluid grid">
 						<div className="devsection">
-								<p className="subtitl is-5 has-text-centered isdata">
+								<TopDiv className="subtitl is-5 has-text-centered isdata">
 									<strong className="has-text-white">MERDEKA DAY SPECIAL</strong>: – GET ADDITIONAL 25% OFF* WHEN YOU PURCHASE MIN. 2 ITEMS*. USE CODE: MERDEKA25
-								</p>
+								</TopDiv>
 						</div>
 					</div>
         </div>
@@ -63,7 +98,7 @@ const Landing = () => {
                   <span className="navbar-item">
                     <Link 
 											to="/contact-us" 
-											className="navbar-item button has-text-small contactBtn" 
+											className="navbar-item is-black button has-text-small contactBtn" 
 											>
 											Contact Us
                     </Link>
@@ -104,26 +139,9 @@ const Landing = () => {
            	</div>
           </div>
         </div>
-      </section>
+      </Section>
     </>
 	);
-}
-
-
-const headerStyle = {
-  fontSize: '2.6rem',
-  marginTop: '80px',
-  color: '#011240'
-}
-
-const paragraphStyle = {
-  fontSize: '1.2rem',
-  color: '#011240'
-}
-
-const bkStyle = {
-  background: 'transparent',
-  color: 'white'
 }
 
 const colorStyle = {
@@ -134,10 +152,6 @@ const colorStyle = {
 
 const spanColor = {
   color: '#fba502'
-}
-
-const bgColor = {
-  background: '#003468',
 }
 
 export default Landing;
