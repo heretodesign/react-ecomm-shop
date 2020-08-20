@@ -22,7 +22,13 @@ const TopDiv = styled.p`
   width: 100%;
 `
 const Div = styled.div`
-  /* ... */
+	width: 450px; 
+	padding: 14px;
+
+	@media (max-width: 768px) { 
+		width: 450px; 
+		padding: 10px;
+	}
 `
 const bkStyle = {
   background: 'transparent',
@@ -136,7 +142,7 @@ const Landing = () => {
                   </div>
                 </div>
               </div>
-           	</div>
+						</div>
           </div>
         </div>
       </Section>
