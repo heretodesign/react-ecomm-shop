@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import img from '../assets/maksim-larin-LtB12xWnkpw-unsplash.jpg'
 import Summer from '../components/Summer'
 import Featured from '../components/Featured'
+import Special from '../components/Special'
 
 const Section = styled.section`
 	background-image: url(${img});
@@ -180,6 +181,7 @@ const Landing = () => {
       </Section>
       <Summer />
       <Featured />
+      <Special />
     </>
 	);
 }

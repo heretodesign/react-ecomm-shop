@@ -8,7 +8,7 @@ const ImgDiv = styled.div`
 	background-repeat:  no-repeat;
 	background-size:  cover;
   position: relative;
-  padding-top: 450px;
+  padding-top: 500px;
   padding-bottom: 70px;
 `
 
@@ -20,6 +20,8 @@ const ParagraphStyle = styled.p`
 
 const Div = styled.div`
   padding-left: 20px;
+  padding-top: 100px;
+
 `
 
 const MainBtn = styled.button`
@@ -48,15 +50,9 @@ const Featured = () => {
                 <div class="column">
                   <ImgDiv className="content">
                     <Div>
-                      <ParagraphStyle className="has-text-left">
-                        Direct product from  
-                      </ParagraphStyle>
                       <div class="columns">
                         <div className="column is-one-quarter">
-                          <MainBtn className="button is-small has-test-small is-fullwidth" id="landBtn">Shop</MainBtn>
-                        </div>
-                        <div className="column is-one-quarter">
-                          <MainBtn className="button is-small has-test-small is-fullwidth" id="landBtn">Check it out</MainBtn>
+                          <MainBtn className="button is-small has-test-small is-fullwidth" id="landBtn">Kids</MainBtn>
                         </div>
                       </div>
                     </Div>
@@ -65,15 +61,9 @@ const Featured = () => {
                 <div class="column">
                   <ImgDiv className="content">
                     <Div>
-                      <ParagraphStyle className="has-text-left">
-                        Direct product from  
-                      </ParagraphStyle>
                       <div class="columns">
                         <div className="column is-one-quarter">
-                          <MainBtn className="button is-small has-test-small is-fullwidth" id="landBtn">Shop</MainBtn>
-                        </div>
-                        <div className="column is-one-quarter">
-                          <MainBtn className="button is-small has-test-small is-fullwidth" id="landBtn">Check it out</MainBtn>
+                          <MainBtn className="button is-small has-test-small is-fullwidth">Men</MainBtn>
                         </div>
                       </div>
                     </Div>
@@ -82,15 +72,9 @@ const Featured = () => {
                 <div class="column">
                   <ImgDiv className="content">
                     <Div>
-                      <ParagraphStyle className="has-text-left">
-                        Direct product from  
-                      </ParagraphStyle>
                       <div class="columns">
                         <div className="column is-one-quarter">
-                          <MainBtn className="button is-small has-test-small is-fullwidth" id="landBtn">Shop</MainBtn>
-                        </div>
-                        <div className="column is-one-quarter">
-                          <MainBtn className="button is-small has-test-small is-fullwidth" id="landBtn">Check it out</MainBtn>
+                          <MainBtn className="button is-small has-test-small is-fullwidth">Women</MainBtn>
                         </div>
                       </div>
                     </Div>
