@@ -3,6 +3,8 @@ import 'react-bulma-components/dist/react-bulma-components.min.css'
 import styled from 'styled-components'
 import { Link } from "react-router-dom"
 import img from '../assets/maksim-larin-LtB12xWnkpw-unsplash.jpg'
+import Summer from '../components/Summer'
+import Featured from '../components/Featured'
 
 const Section = styled.section`
 	background-image: url(${img});
@@ -10,7 +12,7 @@ const Section = styled.section`
 	background-repeat:  no-repeat;
 	background-size:  cover;
 	position: relative;
-	// height: 100vh;
+	height: 100vh;
 `
 const TopDiv = styled.p`
 	font-size: 13px;
@@ -48,6 +50,31 @@ const ColorPara = styled.p`
   font-weight: bolder;
 `
 
+const TextPara = styled.p`
+  color: #fff;
+  font-size: 1.4rem;
+`
+
+const MainBtn = styled.button`
+  color: #fff;
+  background: transparent;
+
+  &:hover {
+    background-color: black;
+    color: white;
+  }
+`
+
+const ContactBtn = {
+  color: '#fff',
+  background: 'transparent',
+
+  '&:hover': {
+    backgroundColor: 'black',
+    color: 'white'
+  }
+}
+
 const Landing = () => {
 	return (
 		<>
@@ -66,7 +93,7 @@ const Landing = () => {
             <div className="container">
               <div className="navbar-brand" id="logoStyle">
                 <a className="navbar-item" href="/">
-                  <strong className="has-text-white is-2">ASEN SHOP</strong>
+                  <strong className="has-text-white is-2">A'SNEAKER HUB</strong>
                 </a>
                 <span className="navbar-burger burger" data-target="navbarMenuHeroA">
                   <span></span>
@@ -108,10 +135,11 @@ const Landing = () => {
                   </Link>
                   <span className="navbar-item">
                     <Link 
-											to="/contact-us" 
-											className="navbar-item is-black button has-text-small contactBtn" 
-											>
-											Contact Us
+                      to="/contact-us" 
+                      className="navbar-item is-transparent button has-text-small contactBtn" 
+                      style={ContactBtn}
+                      >
+                      Contact Us
                     </Link>
                   </span>
                 </div>
@@ -126,24 +154,23 @@ const Landing = () => {
               <div className="content">
                 <div className="columns">
                   <div className="column is-half">
-                    <ColorPara className="subtitle has-text-left is-1">
-                      <strong>Seth Resources</strong> <TextSpan>Petroleum</TextSpan> – Specializing in Petroleum Transportation
+                    <ColorPara className="subtitle is-uppercase has-text-left is-1">
+                      <strong>The Next</strong> <TextSpan>Generation</TextSpan> – Sneakers
                     </ColorPara>
                   </div>
                 </div>
                 <div className="columns">
                   <div className="column is-half">
-                    <p className="has-text-left"> We are your co-pilot:
-                        from remote regions to cities and beyond borders, with our fleet of delivery fuel tankers & vehicles,
-                        SPR offers comfortable, realiable solutions to ensure that your petroleum delivery are made on time, every time. 
-                    </p>
+                    <TextPara className="has-text-left"> 
+                      Glide your way through life, walk faster in a clear path, let sneaker hub summon you next big step. 
+                    </TextPara>
                   </div>
                 </div>
               </div>
               <div className="content" id="landingForm">
                 <div className="columns">
                   <div className="column is-one-quarter">
-                    <a className="button is-medium has-test-small is-fullwidth" id="landBtn">Talk to sales</a>
+                    <MainBtn className="button is-medium has-test-small is-fullwidth" id="landBtn">Talk to sales</MainBtn>
                   </div>
                 </div>
               </div>
@@ -151,6 +178,8 @@ const Landing = () => {
           </div>
         </div>
       </Section>
+      <Summer />
+      <Featured />
     </>
 	);
 }
