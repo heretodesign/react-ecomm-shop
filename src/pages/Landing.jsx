@@ -25,6 +25,10 @@ const Div = styled.div`
 	width: 450px; 
 	padding: 14px;
 
+	&:hover: {
+		background: #FFF3;
+	}
+
 	@media (max-width: 768px) { 
 		width: 450px; 
 		padding: 10px;
@@ -35,12 +39,13 @@ const bkStyle = {
   color: 'white'
 }
 
-const Paragraph = styled.p`
-  /* ... */
+const TextSpan = styled.span`
+  color: #fba502;
 `
-const LinkButton = styled.button`
-	background: #fba502;
-  color: white;
+const ColorPara = styled.p`
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: bolder;
 `
 
 const Landing = () => {
@@ -121,9 +126,9 @@ const Landing = () => {
               <div className="content">
                 <div className="columns">
                   <div className="column is-half">
-                    <p className="subtitle has-text-left is-1" style={colorStyle}>
-                      <strong>Seth Resources</strong> <span style={spanColor}>Petroleum</span> – Specializing in Petroleum Transportation
-                    </p>
+                    <ColorPara className="subtitle has-text-left is-1">
+                      <strong>Seth Resources</strong> <TextSpan>Petroleum</TextSpan> – Specializing in Petroleum Transportation
+                    </ColorPara>
                   </div>
                 </div>
                 <div className="columns">
@@ -148,16 +153,6 @@ const Landing = () => {
       </Section>
     </>
 	);
-}
-
-const colorStyle = {
-  color: '#fff',
-  fontSize: '2.8rem',
-  fontWeight: 'bolder'
-}
-
-const spanColor = {
-  color: '#fba502'
 }
 
 export default Landing;
