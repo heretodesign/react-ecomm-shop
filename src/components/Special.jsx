@@ -5,8 +5,14 @@ import img from '../assets/maksim-larin-LtB12xWnkpw-unsplash.jpg'
 
 const Section = styled.section`
   padding: 0px 0px;
-  background: #003468;
+  background: #fff;
   color: #011240;
+`
+
+const ColorPara = styled.p`
+  color: #fff;
+  font-size: 2.8rem;
+  font-weight: bolder;
 `
 
 const ImgDiv = styled.div`
@@ -15,7 +21,7 @@ const ImgDiv = styled.div`
 	background-repeat:  no-repeat;
 	background-size:  cover;
   position: relative;
-  padding-top: 500px;
+  padding-top: 100px;
   padding-bottom: 70px;
 `
 
@@ -23,10 +29,10 @@ const ColorStyle = styled.p`
   color: #9aa8bd;
 `
 
-const ParentDiv = styled.div`
-  margin-top: 80px;
-  margin-left: 70px;
-  margin-right: 50px;
+const ContentDiv = styled.div`
+  margin-top: 10px;
+  margin-left: 0px;
+  margin-right: 0px;
 `
 
 const ParagraphStyle = styled.p`
@@ -39,11 +45,14 @@ const H4 = styled.p`
   margin-top: 10px;
   color: #fba502;
 `
-
-const iStyle = {
-  paddingBottom: '120px',
-  paddingTop: '20px',
-}
+const H3 = styled.p`
+  margin-top: 10px;
+  font-size: 1.4rem;
+  color: #fba502;
+`
+const TextSpan = styled.span`
+  color: #fba502;
+`
 
 const Special = () => {
   return (
@@ -51,7 +60,7 @@ const Special = () => {
       <Section className="section is-paddingless-horizontal">
         <div className="content" >
           <div class="columns" >
-            <div class="column is-two-thirds" style={iStyle}>
+            <div class="column is-two-thirds">
 
               <ImgDiv className="content" id="contentSide">
                 <ColorStyle className="subtitle is-6 has-text-left is-uppercase" id="headTitle">Our Pioneers Message</ColorStyle>
@@ -68,8 +77,10 @@ const Special = () => {
                 </H4>
               </ImgDiv>
             </div>
-            <div class="column is-one-third" id="founderImg"  style={iStyle}>
-              <img className="content" src={img} height="100%" width="100%" id="imgCover" alt="office" />
+            <div class="column is-one-third" id="founderImg">
+              <ColorPara className="subtitle is-uppercase has-text-left is-1">
+                <strong>The Next</strong> <TextSpan>Generation</TextSpan> – Sneakers
+              </ColorPara>
             </div>
           </div>
         </div>
